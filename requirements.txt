@@ -1,0 +1,17 @@
+# Data Manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Database Connectivity
+sqlalchemy>=2.0.0
+pyodbc>=4.0.35
+
+# Environment & Configuration
+python-dotenv>=1.0.0
+
+# Testing & Quality (for your /tests folder)
+pytest>=7.0.0
+
+# Jupyter Support (for your /notebooks folder)
+ipykernel
+notebook
