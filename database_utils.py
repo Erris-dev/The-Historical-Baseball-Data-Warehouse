@@ -4,7 +4,7 @@ from config import DB_CONFIG
 def get_engine():
     # Construct the connection string once here
     conn_str = f"mssql+pyodbc://{DB_CONFIG['server']}/{DB_CONFIG['database']}?driver={DB_CONFIG['driver']}&trusted_connection=yes"
-    return create_engine(conn_str, isolation_level="AUTOCOMMIT")
+    return create_engine(conn_str, fast_executemany=True,  isolation_level="AUTOCOMMIT")
 
 def create_schemas(engine):
     """

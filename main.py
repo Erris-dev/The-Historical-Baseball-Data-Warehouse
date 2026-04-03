@@ -1,4 +1,5 @@
 from database_utils import get_engine, create_schemas
+from scripts.bronze.load_bronze import load_bronze
 
 def main():
     print("Initializing Data Warehouse Pipeline...")
@@ -10,6 +11,9 @@ def main():
 
         # Step 2: Create Schemas if they don't exist
         create_schemas(engine)
+
+        # Step 3: Load Bronze Data
+        load_bronze(engine)
         
         # Future Steps:
         # - Ingest data from source folders into Bronze layer
